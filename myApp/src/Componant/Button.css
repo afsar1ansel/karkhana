@@ -1,0 +1,25 @@
+
+.btn {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(155, 208, 228);
+}
+
+.btnDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  height: 40px;
+  width: 90%;
+}

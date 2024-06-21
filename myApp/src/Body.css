@@ -1,0 +1,17 @@
+.appBody {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  background-color: rgb(245, 244, 242);
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.mainSection {
+  flex: 3; 
+  margin-right: 20px;
+}
+
+.cartSection {
+  flex: 2; 
+}
