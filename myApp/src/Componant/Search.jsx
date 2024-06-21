@@ -1,34 +1,40 @@
-import "./Search.css"
-import filter from "../assets/filter.svg"
+import "./Search.css";
+import filter1 from "../assets/fileter1.svg";
+import { useContext } from "react";
+import { myContext } from "../Context/Context";
 
 function Search() {
 
-    return (
+  return (
+    <div
+      style={{
+        backgroundColor: "rgb(245, 244, 242)",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "0px 20px",
+      }}
+    >
+      <div className="search">
+        <input
+          type="text"
+          placeholder="Search all products here..."
+          // onChange={handleSearch}
+        />
+        <button>Search</button>
+      </div>
       <div
         style={{
-          backgroundColor: "rgb(245, 244, 242)",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "0px 20px",
+          cursor: "pointer",
+          height: "30px",
+          width: "30px",
+          backgroundColor: "white",
         }}
       >
-        <div className="search">
-          <input type="text" placeholder="Search all product here... " />
-          <button>Search</button>
-        </div>
-        <div
-          style={{
-            cursor: "pointer",
-            height: "30px",
-            width: "30px",
-            backgroundColor: "white",
-          }}
-        >
-          <img src={filter} alt="filter" />
-        </div>
+        <img src={filter1} alt="filter" />
       </div>
-    );
+    </div>
+  );
 }
 
-export default Search
+export default Search;

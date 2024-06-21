@@ -1,12 +1,8 @@
 import "./Item.css";
-
+import { useState } from "react";
 import React from "react";
 import { myContext } from "../Context/Context";
 
-
-function Items(){
-
-  const { addItem } = React.useContext(myContext);
 
    let items = [
      {
@@ -82,12 +78,18 @@ function Items(){
        price: "$25.85",
      },
    ];
+
+function Items(){
+const [fetchItem, setFetchItem] = useState(items);
+  const { addItem } = React.useContext(myContext);
+
   
 
+  
 
     return (
       <div className="items">
-        {items.map((item, index) => (
+        {fetchItem.map((item, index) => (
           <div key={index} className="item" onClick={() => addItem(item)} >
             <img src={item.img} alt={item.name} />
             <div className="item-info">

@@ -10,13 +10,16 @@ const Context = ({ children }) => {
         name: "Ori Gimber 700ml",
         price: "$24.95"}]);
     
+        const [searchVal, setSearchVal] = useState("");
         const addItem = (item) => {
             setState([...state, item]);
         }
     const contextValue = {
       state,
       setState,
-      addItem
+      addItem,
+      searchVal,
+      setSearchVal
     };
 
     

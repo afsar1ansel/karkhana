@@ -32,16 +32,16 @@ const delBtn = {
 function CartItem() {
     const { state, setState, detailsState, setDetailsState } = React.useContext(myContext)
 
-     useEffect(() => {
-       setState([
-         ...state,
-         {
-            id: `${state.length + 1}`,
-           name: "Ori Gimber 700ml",
-           price: "$24.95",
-         }
-       ])
-     }, [])
+    //  useEffect(() => {
+    //    setState([
+    //      ...state,
+    //      {
+    //         id: `${state.length + 1}`,
+    //        name: "Ori Gimber 700ml",
+    //        price: "$24.95",
+    //      }
+    //    ])
+    //  }, [])
 
      const handleDelete = (id) => {
        setState(state.filter((item) => item.id !== id));
